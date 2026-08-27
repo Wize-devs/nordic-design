@@ -2,14 +2,14 @@
   "slide": "00-portada",
   "build_method": "Redesign (2026-08-27): dropped the torn-yellow panel, dotted-grid pattern and outline ghost word from the original layout -- replaced with an interrupted gold hairline frame (catalog-plate feel) and a rotated gold-ring discount seal. Same product photo (assets/producto.png, studio shot generated from the real Red-One jar). Price/percent set in Fira Sans Condensed ExtraBold (Lost in South has no digits 0/2/8). Now built for both feed (index.html, 1080x1350) and story (index-story.html, 1080x1920).",
   "pill": "En tienda",
-  "product_name": "Red-One Aqua Hair Wax",
+  "product_name": "Reuzel",
   "discount": "10%",
   "discount_label": "De descuento",
   "headline": "Llevá tu estilo",
   "headline_highlight": "estilo",
   "validity": "Hasta agotar existencias",
-  "caption_on_image": "Red-One Aqua Hair Wax — 10% de descuento, hasta agotar existencias",
-  "instagram_caption": "Tu Red-One Aqua Hair Wax con 10% de descuento. Hasta agotar existencias. 💈✨\n\nPasa por Nordic Barber Shop y llevate el tuyo.\n\n#NordicBarberShop #RedOne #AquaHairWax #Descuento #BarberShop",
+  "caption_on_image": "Reuzel — 10% de descuento, hasta agotar existencias",
+  "instagram_caption": "Tu Reuzel con 10% de descuento. Hasta agotar existencias. 💈✨\n\nPasa por Nordic Barber Shop y llevate el tuyo.\n\n#NordicBarberShop #Reuzel #Descuento #BarberShop",
   "files": {
     "post": "00-portada.png",
     "story": "00-portada-story.png"
