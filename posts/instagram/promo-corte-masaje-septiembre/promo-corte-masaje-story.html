@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Nordic Barber Shop — Promoción Corte + Masaje (Story)</title>
+<style>
+  @font-face{
+    font-family:"Lost in South";
+    src:url("../../../fonts/lost_in_south/Lost in South.otf") format("opentype");
+  }
+  @font-face{
+    font-family:"Fira Sans Condensed";
+    font-weight:400;
+    src:url("../../../fonts/Fira Sans Condensed/FiraSansCondensed-Regular.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Fira Sans Condensed";
+    font-weight:600;
+    src:url("../../../fonts/Fira Sans Condensed/FiraSansCondensed-SemiBold.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Fira Sans Condensed";
+    font-weight:700;
+    src:url("../../../fonts/Fira Sans Condensed/FiraSansCondensed-Bold.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Fira Sans Condensed";
+    font-weight:800;
+    src:url("../../../fonts/Fira Sans Condensed/FiraSansCondensed-ExtraBold.ttf") format("truetype");
+  }
+
+  :root{
+    --ink:#101010;
+    --charcoal:#1A1A1A;
+    --gold:#FFD200;
+    --gold-deep:#C9A400;
+    --bone:#F7F4EC;
+    --steel:rgba(247,244,236,0.62);
+    --steel-dim:rgba(247,244,236,0.28);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{width:1080px;height:1920px;background:var(--ink);overflow:hidden;}
+  body{
+    font-family:"Fira Sans Condensed";
+    color:var(--bone);
+    display:flex;
+    flex-direction:column;
+    /* Story safe zones: clear of top profile/close UI (~250px) and bottom reply bar (~220px) */
+    padding:260px 80px 220px;
+  }
+
+  .header{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+  .logo{height:150px;margin-bottom:26px;}
+  .pill{
+    display:inline-block;
+    background:var(--gold);
+    color:var(--ink);
+    font-family:"Fira Sans Condensed";
+    font-weight:700;
+    font-size:16px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    padding:9px 24px;
+    border-radius:999px;
+    margin-bottom:28px;
+  }
+  .headline{
+    font-family:"Lost in South";
+    text-transform:uppercase;
+    font-size:88px;
+    line-height:0.95;
+    letter-spacing:.03em;
+  }
+  .headline .hl{color:var(--gold);}
+  .rule{
+    width:100%;
+    height:1px;
+    background:var(--steel-dim);
+    margin-top:36px;
+  }
+
+  .hero{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:32px;
+  }
+  .price{
+    font-family:"Fira Sans Condensed";
+    font-weight:800;
+    color:var(--gold);
+    font-size:280px;
+    line-height:0.9;
+    font-feature-settings:"tnum" 1;
+  }
+  .price-desc{
+    font-family:"Fira Sans Condensed";
+    font-weight:600;
+    font-size:42px;
+    line-height:1.35;
+    max-width:820px;
+    color:var(--bone);
+  }
+
+  .footer{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:22px;
+  }
+  .valid-badge{
+    display:inline-block;
+    border:1px solid var(--gold-deep);
+    color:var(--gold);
+    font-family:"Fira Sans Condensed";
+    font-weight:700;
+    font-size:24px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    padding:13px 30px;
+    border-radius:999px;
+  }
+  .footer .handle{
+    font-family:"Fira Sans Condensed";
+    font-weight:600;
+    font-size:22px;
+    color:var(--steel);
+    letter-spacing:.02em;
+  }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <img class="logo" src="../../../logo-variations/Nordic-BarberShop-logo-white.svg" alt="Nordic Barber Shop">
+    <div class="pill">Promoción de septiembre</div>
+    <div class="headline">CORTE + <span class="hl">MASAJE</span></div>
+    <div class="rule"></div>
+  </div>
+
+  <div class="hero">
+    <div class="price">Q100</div>
+    <div class="price-desc">Corte de cabello + 15 minutos de masaje en nuestra área de masajes</div>
+  </div>
+
+  <div class="footer">
+    <div class="valid-badge">Válido del 1 al 30 de septiembre</div>
+    <div class="handle">@nordicbarbershopgt</div>
+  </div>
+
+</body>
+</html>
