@@ -23,148 +23,190 @@
     src:url("assets/fonts/FiraSansCondensed-ExtraBold.ttf") format("truetype");
     font-weight:800;
   }
+  :root{
+    --ink:#101010;
+    --charcoal:#1A1A1A;
+    --gold:#FFD200;
+    --gold-deep:#C9A400;
+    --bone:#F7F4EC;
+    --steel:rgba(247,244,236,0.62);
+    --steel-dim:rgba(247,244,236,0.28);
+  }
   *{box-sizing:border-box;margin:0;padding:0;}
-  html,body{width:1080px;height:1350px;background:#101010;overflow:hidden;}
+  html,body{width:1080px;height:1350px;background:var(--ink);overflow:hidden;}
 
   .canvas{
     position:relative;
     width:1080px;
     height:1350px;
-    background:#101010;
+    background:var(--ink);
     overflow:hidden;
+    font-family:"Fira Sans Condensed";
+    color:var(--bone);
   }
 
-  /* ---- dot pattern, upper-left, on black ---- */
-  .dots{
+  .glow{
     position:absolute;
-    top:0; left:0;
-    width:620px; height:460px;
-    z-index:1;
-    background-image: radial-gradient(circle, rgba(255,210,0,.6) 3.5px, transparent 4px);
-    background-size: 28px 28px;
-    -webkit-mask-image: linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,0) 78%);
-            mask-image: linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,0) 78%);
+    left:50%; top:520px;
+    width:900px; height:900px;
+    transform:translate(-50%,-50%);
+    background:radial-gradient(circle, rgba(255,210,0,.10) 0%, rgba(255,210,0,0) 62%);
+    z-index:0;
   }
 
-  /* ---- torn yellow panel, upper-right ---- */
-  .torn-yellow{
+  /* ---- interrupted gold hairline frame, gap at top for the logo ---- */
+  .frame-top-l{ position:absolute; top:44px; left:44px; width:369px; height:1px; background:var(--gold-deep); }
+  .frame-top-r{ position:absolute; top:44px; right:44px; width:369px; height:1px; background:var(--gold-deep); }
+  .frame-left{ position:absolute; top:44px; bottom:44px; left:44px; width:1px; background:var(--gold-deep); }
+  .frame-right{ position:absolute; top:44px; bottom:44px; right:44px; width:1px; background:var(--gold-deep); }
+  .frame-bottom{ position:absolute; bottom:44px; left:44px; right:44px; height:1px; background:var(--gold-deep); }
+
+  .logo{
     position:absolute;
-    top:-40px; left:0;
-    width:1080px; height:900px;
-    background:#FFD200;
-    z-index:2;
-    clip-path: polygon(0.0% -2.0%, 100.0% -2.0%, 100.0% 46.0%, 100.0% 44.9%, 92.9% 41.1%, 85.7% 41.5%, 78.6% 35.1%, 71.4% 35.4%, 64.3% 31.6%, 57.1% 26.9%, 50.0% 27.0%, 42.9% 21.3%, 35.7% 21.1%, 28.6% 16.1%, 21.4% 13.5%, 14.3% 12.9%, 7.1% 12.8%, 0.0% 5.6%, 0.0% -2.0%);
+    top:60px; left:50%;
+    transform:translateX(-50%);
+    height:60px;
+    z-index:6;
   }
-
-  /* ---- brand pill ---- */
   .pill{
     position:absolute;
-    top:64px; left:64px;
-    z-index:6;
-    background:#FFD200;
-    color:#101010;
-    font-family:"Fira Sans Condensed";
-    font-weight:800;
-    font-size:22px;
-    letter-spacing:.12em;
+    top:148px; left:50%;
+    transform:translateX(-50%);
+    background:var(--gold);
+    color:var(--ink);
+    font-weight:700;
+    font-size:15px;
+    letter-spacing:.14em;
     text-transform:uppercase;
-    padding:12px 26px;
+    padding:9px 22px;
     border-radius:999px;
-  }
-
-  /* ---- ghost outline word, bleeding off bottom ---- */
-  .ghost{
-    position:absolute;
-    left:-10px;
-    bottom:-58px;
-    z-index:3;
-    font-family:"Lost in South";
-    font-size:190px;
-    letter-spacing:.02em;
-    text-transform:uppercase;
-    color:transparent;
-    -webkit-text-stroke: 2px rgba(255,210,0,.32);
+    z-index:6;
     white-space:nowrap;
   }
 
-  /* ---- product image: studio shot, edges feathered to blend into canvas ---- */
   .product{
     position:absolute;
-    top:300px;
-    left:130px;
-    width:820px;
-    z-index:5;
+    top:250px;
+    left:50%;
+    transform:translateX(-50%);
+    width:680px;
+    z-index:3;
     -webkit-mask-image: radial-gradient(ellipse 58% 56% at 50% 54%, #000 55%, transparent 88%);
             mask-image: radial-gradient(ellipse 58% 56% at 50% 54%, #000 55%, transparent 88%);
   }
 
-  /* ---- top-right logo, sits on the yellow tear ---- */
-  .brand-logo{
+  .seal{
     position:absolute;
-    top:44px;
-    right:64px;
-    height:84px;
-    z-index:6;
+    top:640px; left:118px;
+    width:250px; height:250px;
+    transform:rotate(-12deg);
+    border-radius:50%;
+    border:2px solid var(--gold);
+    background:rgba(16,16,16,.82);
+    z-index:5;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
   }
-
-  /* ---- headline block ---- */
-  .headline{
+  .seal::before{
+    content:"";
     position:absolute;
-    left:80px;
-    top:975px;
-    z-index:6;
-    text-transform:uppercase;
+    inset:9px;
+    border-radius:50%;
+    border:1px solid var(--gold-deep);
   }
-  .headline .gold-line{
-    font-family:"Lost in South";
-    font-size:44px;
-    line-height:1.05;
-    letter-spacing:.06em;
-    color:#FFD200;
-  }
-  .headline .white-line{
-    font-family:"Lost in South";
-    font-size:92px;
-    line-height:.95;
-    letter-spacing:.05em;
-    color:#F7F4EC;
-    margin-top:14px;
-  }
-
-  /* ---- footer caption ---- */
-  .caption{
-    position:absolute;
-    left:80px;
-    bottom:52px;
-    z-index:6;
+  .seal-pct{
     font-family:"Fira Sans Condensed";
+    font-weight:800;
+    font-size:80px;
+    line-height:1;
+    color:var(--gold);
+    font-feature-settings:"tnum" 1;
+  }
+  .seal-label{
+    font-weight:700;
+    font-size:16px;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--bone);
+    margin-top:6px;
+  }
+
+  .content{
+    position:absolute;
+    left:80px; right:80px;
+    bottom:150px;
+    z-index:6;
+  }
+  .kicker{
+    font-weight:700;
+    font-size:22px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:14px;
+  }
+  .headline{
+    font-family:"Lost in South";
+    text-transform:uppercase;
+    font-size:78px;
+    line-height:.95;
+    letter-spacing:.07em;
+  }
+  .headline .hl{color:var(--gold);}
+  .subline{
+    font-weight:600;
+    font-size:24px;
+    color:var(--steel);
+    margin-top:24px;
+  }
+
+  .footer{
+    position:absolute;
+    left:0; right:0; bottom:60px;
+    display:flex;
+    justify-content:center;
+    z-index:6;
+  }
+  .handle{
     font-weight:600;
     font-size:22px;
+    color:var(--steel);
     letter-spacing:.02em;
-    color:rgba(247,244,236,.72);
   }
 </style>
 </head>
 <body>
   <div class="canvas">
 
-    <div class="dots"></div>
-    <div class="torn-yellow"></div>
-    <div class="pill">Nordic Barber Shop</div>
-    <img class="brand-logo" src="assets/Nordic-BarberShop-logo-black.png">
+    <div class="glow"></div>
 
-    <div class="ghost">CABELLO</div>
+    <div class="frame-top-l"></div>
+    <div class="frame-top-r"></div>
+    <div class="frame-left"></div>
+    <div class="frame-right"></div>
+    <div class="frame-bottom"></div>
 
-    <img class="product" src="assets/producto.png">
+    <img class="logo" src="assets/Nordic-BarberShop-logo-white.svg" alt="Nordic Barber Shop">
+    <div class="pill">En tienda</div>
 
-    <div class="headline">
-      <div class="gold-line">TENEMOS LOS</div>
-      <div class="gold-line">MEJORES PRODUCTOS</div>
-      <div class="white-line">PARA TU</div>
-      <div class="white-line">CABELLO</div>
+    <img class="product" src="assets/producto.png" alt="Red-One Aqua Hair Wax">
+
+    <div class="seal">
+      <div class="seal-pct">10%</div>
+      <div class="seal-label">De descuento</div>
     </div>
 
-    <div class="caption">Red-One Aqua Hair Wax &mdash; disponible en tienda</div>
+    <div class="content">
+      <div class="kicker">Red-One Aqua Hair Wax</div>
+      <div class="headline">Llevá tu <span class="hl">estilo</span></div>
+      <div class="subline">Hasta agotar existencias</div>
+    </div>
+
+    <div class="footer">
+      <div class="handle">@nordicbarbershopgt</div>
+    </div>
 
   </div>
 </body>
