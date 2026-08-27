@@ -1,12 +1,19 @@
 {
   "post": "Promoción de septiembre — Corte + Masaje",
-  "build_method": "Option B (carousel-tile-generation.md), same solid-background HTML/CSS pattern as posts/instagram/paquete-masajes-precios/: no AI-generated photo, headless Chrome render at 2x. Price set in Fira Sans Condensed ExtraBold (Lost in South has no digits 0/2/8).",
+  "build_method": "Option B (carousel-tile-generation.md): background plate generated with scripts/kie_image_gen.py (kie.ai gpt-image-2-text-to-image, feed at 3:4/2K, story at 9:16/2K) — a duotone shot of a relaxed man in a modern massage chair, gold key light. HTML/CSS overlay on top: bottom scrim, a service list (scissors + chair icons) and two glanceable pill chips at the foot — a solid-gold Q100 price chip and an outlined date chip with a small drawn calendar icon (all 30 September days marked gold) — instead of one large price number. Headless Chrome render at 2x. Price and every other digit set in Fira Sans Condensed ExtraBold (Lost in South has no digits 0/2/8).",
   "pill": "Promoción de septiembre",
   "headline": "CORTE + MASAJE",
   "headline_highlight": "MASAJE",
+  "services": [
+    { "name": "Corte de cabello", "tag": "Incluido", "icon": "tijera" },
+    { "name": "15 min. de masaje", "tag": "Incluido", "icon": "silla" }
+  ],
+  "price_label": "Los dos por",
   "price": "Q100",
   "price_desc": "Corte de cabello + 15 minutos de masaje en nuestra área de masajes",
   "validity": "Válido del 1 al 30 de septiembre",
+  "validity_label": "Septiembre",
+  "validity_range": "Del 1 al 30",
   "instagram_caption": "Promoción de septiembre en Nordic Barber Shop. ✂️💆\n\nCorte de cabello + 15 minutos de masaje en nuestra área de masajes por solo Q100.\n\nVálido del 1 al 30 de septiembre. Agenda tu cita antes de que se acabe el mes.\n\n#NordicBarberShop #Guatemala #Promocion #Barbershop #Masajes",
   "files": {
     "post": "promo-corte-masaje.png",
