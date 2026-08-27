@@ -1,6 +1,6 @@
 {
   "slide": "00-portada",
-  "build_method": "Redesign (2026-08-27): dropped the torn-yellow panel, dotted-grid pattern and outline ghost word from the original layout -- replaced with an interrupted gold hairline frame (catalog-plate feel) and a rotated gold-ring discount seal. Same product photo (assets/producto.png, studio shot generated from the real Red-One jar). Price/percent set in Fira Sans Condensed ExtraBold (Lost in South has no digits 0/2/8). Now built for both feed (index.html, 1080x1350) and story (index-story.html, 1080x1920).",
+  "build_method": "Redesign (2026-08-27): dropped the torn-yellow panel, dotted-grid pattern and outline ghost word from the original layout -- replaced with an interrupted gold hairline frame (catalog-plate feel) and a rotated gold-ring discount seal. Product photo (assets/producto.png) restyled with scripts/gemini_image_gen.py from a real photo of the Reuzel Hollands Finest Pomade tin (refs/reuzel-pomade-ref.png, raw/prompt-producto-reuzel.txt) -- label, pig logo, and every printed word kept unaltered, only the studio lighting/background changed. Percent set in Fira Sans Condensed ExtraBold (Lost in South has no digits 0/2/8). Built for both feed (index.html, 1080x1350) and story (index-story.html, 1080x1920).",
   "pill": "En tienda",
   "product_name": "Reuzel",
   "discount": "10%",
