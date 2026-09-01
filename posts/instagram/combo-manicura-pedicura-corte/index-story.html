@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Nordic Barber Shop — Combo Manicura + Pedicura + Corte (Story)</title>
+<style>
+  @font-face{
+    font-family:"Lost in South";
+    src:url("../../../fonts/lost_in_south/Lost in South.otf") format("opentype");
+  }
+  @font-face{
+    font-family:"Fira Sans Condensed";
+    font-weight:400;
+    src:url("../../../fonts/Fira Sans Condensed/FiraSansCondensed-Regular.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Fira Sans Condensed";
+    font-weight:700;
+    src:url("../../../fonts/Fira Sans Condensed/FiraSansCondensed-Bold.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Fira Sans Condensed";
+    font-weight:800;
+    src:url("../../../fonts/Fira Sans Condensed/FiraSansCondensed-ExtraBold.ttf") format("truetype");
+  }
+
+  :root{
+    --ink:#101010;
+    --charcoal:#1A1A1A;
+    --gold:#FFD200;
+    --gold-deep:#C9A400;
+    --bone:#F7F4EC;
+    --steel:rgba(247,244,236,.62);
+    --steel-dim:rgba(247,244,236,.28);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{width:1080px;height:1920px;background:var(--ink);overflow:hidden;}
+  body{position:relative;font-family:"Fira Sans Condensed";color:var(--bone);}
+
+  .bg{
+    position:absolute;
+    inset:0;
+    width:100%;height:100%;
+    object-fit:cover;
+    object-position:50% 20%;
+  }
+  .scrim-top{
+    position:absolute;
+    left:0;right:0;top:0;height:320px;
+    background:linear-gradient(to bottom, rgba(16,16,16,.68) 0%, rgba(16,16,16,0) 100%);
+  }
+  .scrim{
+    position:absolute;
+    left:0;right:0;bottom:0;height:60%;
+    background:linear-gradient(to bottom,
+      rgba(16,16,16,0) 0%,
+      rgba(16,16,16,.5) 22%,
+      rgba(16,16,16,.96) 52%,
+      rgba(16,16,16,1) 100%);
+  }
+
+  /* Story safe zones: clear of top profile/close UI (~250px) and bottom reply bar (~220px) */
+  .topbar{
+    position:absolute;
+    top:260px;left:64px;right:64px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .pill{
+    display:inline-block;
+    background:var(--gold);
+    color:var(--ink);
+    font-weight:700;
+    font-size:16px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    padding:9px 22px;
+    border-radius:999px;
+  }
+  .logo{height:64px;}
+
+  .content{
+    position:absolute;
+    left:70px;right:70px;bottom:320px;
+    display:flex;
+    flex-direction:column;
+    gap:36px;
+  }
+
+  .headline{
+    font-family:"Lost in South";
+    text-transform:uppercase;
+    font-size:80px;
+    line-height:.96;
+    letter-spacing:.06em;
+    text-align:center;
+  }
+  .headline .hl{color:var(--gold);}
+
+  .services{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  }
+  .service-row{
+    display:flex;
+    align-items:center;
+    gap:18px;
+  }
+  .service-name{
+    font-weight:700;
+    font-size:34px;
+    color:var(--bone);
+    white-space:nowrap;
+  }
+  .service-leader{
+    flex:1;
+    border-bottom:1px dashed var(--steel-dim);
+    margin:0 14px;
+    transform:translateY(-6px);
+  }
+  .service-tag{
+    font-weight:700;
+    font-size:22px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--steel);
+    white-space:nowrap;
+  }
+
+  .price-chip{
+    align-self:center;
+    display:inline-flex;
+    flex-direction:column;
+    gap:4px;
+    background:var(--gold);
+    border-radius:20px;
+    padding:22px 44px;
+    margin-top:10px;
+  }
+  .price-chip-label{
+    font-weight:700;
+    font-size:17px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:rgba(16,16,16,.65);
+    text-align:center;
+  }
+  .price-chip-value{
+    font-weight:800;
+    font-size:76px;
+    line-height:1;
+    color:var(--ink);
+    letter-spacing:-.01em;
+    font-feature-settings:"tnum" 1;
+    text-align:center;
+  }
+
+  .footer{
+    position:absolute;
+    left:0;right:0;bottom:230px;
+    display:flex;
+    justify-content:center;
+  }
+  .handle{
+    font-weight:600;
+    font-size:24px;
+    color:var(--steel);
+    letter-spacing:.02em;
+  }
+</style>
+</head>
+<body>
+
+  <img class="bg" src="assets/bg-story.png" alt="">
+  <div class="scrim-top"></div>
+  <div class="scrim"></div>
+
+  <div class="topbar">
+    <div class="pill">Combo especial</div>
+    <img class="logo" src="../../../logo-variations/Nordic-BarberShop-logo-white.svg" alt="Nordic Barber Shop">
+  </div>
+
+  <div class="content">
+    <div class="headline">MANICURA + PEDICURA<br>+ <span class="hl">CORTE</span></div>
+
+    <div class="services">
+      <div class="service-row">
+        <div class="service-name">Manicura Spa</div>
+        <div class="service-leader"></div>
+        <div class="service-tag">Incluido</div>
+      </div>
+      <div class="service-row">
+        <div class="service-name">Pedicura Spa</div>
+        <div class="service-leader"></div>
+        <div class="service-tag">Incluido</div>
+      </div>
+      <div class="service-row">
+        <div class="service-name">Corte de cabello</div>
+        <div class="service-leader"></div>
+        <div class="service-tag">Incluido</div>
+      </div>
+    </div>
+
+    <div class="price-chip">
+      <div class="price-chip-label">Los tres por</div>
+      <div class="price-chip-value">Q350</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="handle">@nordicbarbershopgt</div>
+  </div>
+
+</body>
+</html>

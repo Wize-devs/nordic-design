@@ -1,6 +1,6 @@
 {
   "post": "Combo especial — Manicura + Pedicura + Corte",
-  "build_method": "Option B (carousel-tile-generation.md): background plate generated with the kie.ai gpt-image-2-text-to-image API (feed at 3:4/2K) — a close-up duotone shot of a men's manicure in progress, gold rim key light. HTML/CSS overlay: bottom scrim, an enlarged three-row service list (Manicura Spa, Pedicura Spa, Corte de cabello, all marked Incluido) set as the visual anchor of the layout, and the price degraded to a compact gold chip below the services (not a dominant number) so the reading order is services first, price second — per explicit client feedback on the previous version. Headless Chrome render at 2x. Price set in Fira Sans Condensed ExtraBold (Lost in South has no digits 0/2/8).",
+  "build_method": "Option B (carousel-tile-generation.md): background plate generated with the kie.ai gpt-image-2-text-to-image API (feed at 3:4/2K, story at 9:16/2K) — a close-up duotone shot of a men's manicure in progress, gold rim key light. HTML/CSS overlay: bottom scrim, an enlarged three-row service list (Manicura Spa, Pedicura Spa, Corte de cabello, all marked Incluido) set as the visual anchor of the layout, and the price degraded to a compact gold chip below the services (not a dominant number) so the reading order is services first, price second — per explicit client feedback on the previous version. Story version reuses the same layout logic within the story safe zones (topbar below ~260px, footer above the ~230px reply-bar clearance). Headless Chrome render at 2x. Price set in Fira Sans Condensed ExtraBold (Lost in South has no digits 0/2/8).",
   "pill": "Combo especial",
   "headline": "MANICURA + PEDICURA + CORTE",
   "headline_highlight": "CORTE",
@@ -13,6 +13,7 @@
   "price": "Q350",
   "instagram_caption": "Combo especial en Nordic Barber Shop. ✂️💅🦶\n\nManicura Spa + Pedicura Spa + Corte de cabello, los tres por solo Q350.\n\nAgenda tu cita y sal completo, de pies a cabeza.\n\n#NordicBarberShop #Guatemala #Barbershop #Manicura #Pedicura",
   "files": {
-    "post": "combo-manicura-pedicura-corte.png"
+    "post": "combo-manicura-pedicura-corte.png",
+    "story": "00-story.png"
   }
 }
