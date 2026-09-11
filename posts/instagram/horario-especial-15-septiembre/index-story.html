@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Nordic Barber Shop — Horario especial 15 de septiembre (Story)</title>
+<style>
+  @font-face{
+    font-family:"Lost in South";
+    src:url("../../../fonts/lost_in_south/Lost in South.otf") format("opentype");
+  }
+  @font-face{
+    font-family:"Fira Sans Condensed";
+    font-weight:400;
+    src:url("../../../fonts/Fira Sans Condensed/FiraSansCondensed-Regular.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Fira Sans Condensed";
+    font-weight:700;
+    src:url("../../../fonts/Fira Sans Condensed/FiraSansCondensed-Bold.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Fira Sans Condensed";
+    font-weight:800;
+    src:url("../../../fonts/Fira Sans Condensed/FiraSansCondensed-ExtraBold.ttf") format("truetype");
+  }
+
+  :root{
+    --ink:#101010;
+    --charcoal:#1A1A1A;
+    --gold:#FFD200;
+    --gold-deep:#C9A400;
+    --bone:#F7F4EC;
+    --steel:rgba(247,244,236,.62);
+    --steel-dim:rgba(247,244,236,.28);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink);}
+
+  .canvas{
+    position:relative;
+    width:1080px;
+    height:1920px;
+  }
+
+  .bg{
+    position:absolute;
+    inset:0;
+    width:100%;height:100%;
+    object-fit:cover;
+    object-position:50% 12%;
+  }
+
+  /* Scrim sutil arriba, fuerte abajo */
+  .scrim-top{
+    position:absolute;
+    left:0;right:0;top:0;height:22%;
+    background:linear-gradient(to bottom,rgba(16,16,16,.62) 0%,rgba(16,16,16,0) 100%);
+  }
+  .scrim-bottom{
+    position:absolute;
+    left:0;right:0;bottom:0;height:72%;
+    background:linear-gradient(to top,
+      var(--ink) 0%,
+      var(--ink) 46%,
+      rgba(16,16,16,.97) 58%,
+      rgba(16,16,16,.72) 76%,
+      rgba(16,16,16,0) 100%);
+  }
+
+  /* Logo — bajo la zona segura superior de Instagram */
+  .logo{
+    position:absolute;
+    top:260px;right:56px;
+    height:80px;
+  }
+
+  /* Pill — bajo la zona segura superior de Instagram */
+  .pill{
+    position:absolute;
+    top:274px;left:64px;
+    background:var(--gold);
+    color:var(--ink);
+    font-family:"Fira Sans Condensed";
+    font-weight:800;
+    font-size:24px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    padding:12px 28px;
+    border-radius:40px;
+  }
+
+  /* Todo el copy anclado al fondo, con espacio para la barra de respuesta */
+  .content{
+    position:absolute;
+    left:64px;right:64px;bottom:296px;
+  }
+
+  /* Titular */
+  .headline{
+    font-family:"Lost in South";
+    font-size:68px;
+    line-height:.92;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+    color:var(--bone);
+    margin-bottom:30px;
+  }
+  .headline .hl{color:var(--gold);}
+
+  /* Fila de horario — el ancla visual del layout */
+  .hours{
+    border-top:1px solid rgba(247,244,236,.15);
+    margin-bottom:30px;
+  }
+  .hours-row{
+    display:flex;
+    align-items:center;
+    padding:26px 0;
+    border-bottom:1px solid rgba(247,244,236,.15);
+  }
+  .hours-day{
+    font-family:"Fira Sans Condensed";
+    font-weight:700;
+    font-size:34px;
+    letter-spacing:.01em;
+    text-transform:uppercase;
+    color:var(--bone);
+    flex:1;
+  }
+  .hours-dots{
+    border-bottom:2px dotted rgba(247,244,236,.22);
+    flex:1;
+    margin:0 18px;
+    max-width:110px;
+  }
+  .hours-time{
+    font-family:"Fira Sans Condensed";
+    font-weight:800;
+    font-size:38px;
+    letter-spacing:0;
+    color:var(--gold);
+    font-feature-settings:"tnum" 1;
+  }
+
+  .caption{
+    font-family:"Fira Sans Condensed";
+    font-weight:400;
+    font-size:28px;
+    line-height:1.4;
+    color:var(--bone);
+    opacity:.85;
+  }
+
+  .footer{
+    position:absolute;
+    left:0;right:0;bottom:200px;
+    display:flex;
+    justify-content:center;
+  }
+  .handle{
+    font-family:"Fira Sans Condensed";
+    font-weight:600;
+    font-size:21px;
+    color:var(--steel);
+    letter-spacing:.03em;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+
+  <img class="bg" src="assets/bg-story.png" alt="">
+  <div class="scrim-top"></div>
+  <div class="scrim-bottom"></div>
+
+  <img class="logo" src="../../../logo-variations/Nordic-BarberShop-logo-white.svg" alt="Nordic Barber Shop">
+  <div class="pill">Horario especial</div>
+
+  <div class="content">
+
+    <div class="headline">EL 15 DE SEPTIEMBRE<br><span class="hl">SÍ ABRIMOS</span></div>
+
+    <div class="hours">
+      <div class="hours-row">
+        <div class="hours-day">Martes 15 de sept.</div>
+        <div class="hours-dots"></div>
+        <div class="hours-time">10 AM&ndash;5 PM</div>
+      </div>
+    </div>
+
+    <div class="caption">Día de la Independencia &mdash; agenda tu cita con tiempo.</div>
+
+  </div>
+
+  <div class="footer">
+    <div class="handle">@nordicbarbershopgt</div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "post": "horario-especial-15-septiembre",
+  "build_method": "Option B (hybrid HTML overlay). Backgrounds generated with scripts/kie_image_gen.mjs (Node port of kie_image_gen.py, made because this machine has no working Python interpreter) -- kie.ai gpt-image-2-text-to-image, feed background at aspect-ratio 3:4 / resolution 2K, story background at aspect-ratio 9:16 / resolution 2K. Text/logo layer is real HTML+CSS (index.html / index-story.html) reusing the layout and CSS from posts/instagram/combo-manicura-pedicura-corte/, with the services+price block replaced by a single hours row. Rendered to PNG via headless Chrome at --force-device-scale-factor=2 (1080x1350 -> 2160x2700 feed, 1080x1920 -> 2160x3840 story). The hours row (10 AM-5 PM) is set in Fira Sans Condensed, never Lost in South, because that font is missing the 0/2/8 digit glyphs.",
+  "pill": "Horario especial",
+  "headline": "El 15 de septiembre / Sí abrimos",
+  "headline_highlight": "Sí abrimos",
+  "hours": {
+    "day": "Martes 15 de sept.",
+    "time": "10 AM–5 PM"
+  },
+  "caption_on_image": "Día de la Independencia — agenda tu cita con tiempo.",
+  "instagram_caption": "El martes 15 de septiembre es Día de la Independencia y nosotros abrimos igual, con horario especial: de 10 AM a 5 PM. Si quieres estrenar corte para el feriado, agenda con tiempo — ese día el espacio se llena rápido. 💈🇬🇹\n\n#NordicBarberShop #15DeSeptiembre #Independencia #Guatemala #BarberShop #HorarioEspecial",
+  "files": {
+    "post": "00-portada.png",
+    "story": "00-story.png"
+  }
+}
