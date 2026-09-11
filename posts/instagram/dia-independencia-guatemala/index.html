@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Nordic Barber Shop — Día de la Independencia de Guatemala</title>
+<style>
+  @font-face{
+    font-family:"Lost in South";
+    src:url("../../../fonts/lost_in_south/Lost in South.otf") format("opentype");
+  }
+  @font-face{
+    font-family:"Fira Sans Condensed";
+    font-weight:400;
+    src:url("../../../fonts/Fira Sans Condensed/FiraSansCondensed-Regular.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Fira Sans Condensed";
+    font-weight:700;
+    src:url("../../../fonts/Fira Sans Condensed/FiraSansCondensed-Bold.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Fira Sans Condensed";
+    font-weight:800;
+    src:url("../../../fonts/Fira Sans Condensed/FiraSansCondensed-ExtraBold.ttf") format("truetype");
+  }
+
+  :root{
+    --ink:#101010;
+    --charcoal:#1A1A1A;
+    --gold:#FFD200;
+    --gold-deep:#C9A400;
+    --bone:#F7F4EC;
+    --steel:rgba(247,244,236,.62);
+    --steel-dim:rgba(247,244,236,.28);
+    --celeste:#4997D0; /* azul de la bandera de Guatemala -- excepcion de marca deliberada, ver copy.json build_method */
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{width:1080px;height:1350px;overflow:hidden;background:var(--ink);}
+
+  .canvas{
+    position:relative;
+    width:1080px;
+    height:1350px;
+  }
+
+  .bg{
+    position:absolute;
+    inset:0;
+    width:100%;height:100%;
+    object-fit:cover;
+    object-position:50% 14%;
+  }
+
+  /* Scrim sutil arriba, fuerte abajo */
+  .scrim-top{
+    position:absolute;
+    left:0;right:0;top:0;height:22%;
+    background:linear-gradient(to bottom,rgba(16,16,16,.62) 0%,rgba(16,16,16,0) 100%);
+  }
+  .scrim-bottom{
+    position:absolute;
+    left:0;right:0;bottom:0;height:72%;
+    background:linear-gradient(to top,
+      var(--ink) 0%,
+      var(--ink) 46%,
+      rgba(16,16,16,.97) 58%,
+      rgba(16,16,16,.72) 76%,
+      rgba(16,16,16,0) 100%);
+  }
+
+  /* Logo top-right */
+  .logo{
+    position:absolute;
+    top:50px;right:56px;
+    height:80px;
+  }
+
+  /* Pill top-left */
+  .pill{
+    position:absolute;
+    top:64px;left:64px;
+    background:var(--celeste);
+    color:var(--ink);
+    font-family:"Fira Sans Condensed";
+    font-weight:800;
+    font-size:24px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    padding:12px 28px;
+    border-radius:40px;
+  }
+
+  /* Todo el copy anclado al fondo, con espacio reservado para el footer */
+  .content{
+    position:absolute;
+    left:64px;right:64px;bottom:126px;
+  }
+
+  /* Titular */
+  .headline{
+    font-family:"Lost in South";
+    font-size:68px;
+    line-height:.92;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+    color:var(--bone);
+    margin-bottom:30px;
+  }
+  .headline .hl{color:var(--celeste);}
+
+  /* Divisor tricolor — el ancla visual del layout, reemplaza la fila de horario */
+  .flag-rule{
+    display:flex;
+    height:10px;
+    margin-bottom:30px;
+    border-radius:3px;
+    overflow:hidden;
+  }
+  .flag-rule span{flex:1;}
+  .flag-rule .c{background:var(--celeste);}
+  .flag-rule .w{background:var(--bone);}
+
+  .caption{
+    font-family:"Fira Sans Condensed";
+    font-weight:400;
+    font-size:28px;
+    line-height:1.4;
+    color:var(--bone);
+    opacity:.85;
+  }
+
+  .footer{
+    position:absolute;
+    left:0;right:0;bottom:48px;
+    display:flex;
+    justify-content:center;
+  }
+  .handle{
+    font-family:"Fira Sans Condensed";
+    font-weight:600;
+    font-size:21px;
+    color:var(--steel);
+    letter-spacing:.03em;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+
+  <img class="bg" src="assets/bg.png" alt="">
+  <div class="scrim-top"></div>
+  <div class="scrim-bottom"></div>
+
+  <img class="logo" src="../../../logo-variations/Nordic-BarberShop-logo-white.svg" alt="Nordic Barber Shop">
+  <div class="pill">15 de septiembre</div>
+
+  <div class="content">
+
+    <div class="headline">ORGULLOSAMENTE<br><span class="hl">GUATEMALTECOS</span></div>
+
+    <div class="flag-rule">
+      <span class="c"></span><span class="w"></span><span class="c"></span>
+    </div>
+
+    <div class="caption">Feliz Día de la Independencia.</div>
+
+  </div>
+
+  <div class="footer">
+    <div class="handle">@nordicbarbershopgt</div>
+  </div>
+
+</div>
+</body>
+</html>

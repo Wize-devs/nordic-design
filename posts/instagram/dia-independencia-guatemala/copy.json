@@ -1,0 +1,13 @@
+{
+  "post": "dia-independencia-guatemala",
+  "build_method": "Option B (hybrid HTML overlay). Backgrounds generated with scripts/kie_image_gen.mjs (Node port used because this machine has no working Python interpreter) -- kie.ai gpt-image-2-text-to-image, feed background at aspect-ratio 3:4 / resolution 2K, story background at aspect-ratio 9:16 / resolution 2K (the two downloads came back cross-assigned to the requested filenames and were swapped by hand after checking actual pixel dimensions, before building the overlay). Text/logo layer is real HTML+CSS (index.html / index-story.html) reusing the layout and CSS from posts/instagram/horario-especial-15-septiembre/, with the hours row replaced by a celeste/bone/celeste flag-rule divider. Rendered to PNG via headless Chrome at --force-device-scale-factor=2 (1080x1350 -> 2160x2700 feed, 1080x1920 -> 2160x3840 story). Deliberate brand exception: design-system.md defines only ink/bone/gold as brand hues, but this post adds Guatemala's flag celeste (#4997D0) in the pill, the headline highlight word, and the flag-rule divider only -- the same 'documented deliberate exception' pattern used in posts/instagram/mundial-bandera-argentina/ and posts/instagram/espana-portugal-partido/ for national-flag colors. Photography stays duotone ink/gold; gold now reads purely as the photo's key light, not as an accent color, since celeste takes over the accent role for this one post. This is a purely commemorative post (no hours, no price, no booking CTA) -- distinct from the operational posts/instagram/horario-especial-15-septiembre/ post about special hours on the same date; do not merge or confuse the two.",
+  "pill": "15 de septiembre",
+  "headline": "Orgullosamente / Guatemaltecos",
+  "headline_highlight": "Guatemaltecos",
+  "caption_on_image": "Feliz Día de la Independencia.",
+  "instagram_caption": "Hoy Guatemala cumple un año más de independencia. Desde Nordic Barber Shop celebramos con orgullo al país que nos recibe todos los días. 🇬🇹\n\nFeliz 15 de septiembre.\n\n#15DeSeptiembre #Independencia #Guatemala #NordicBarberShop #BarberShop #Zona4",
+  "files": {
+    "post": "00-portada.png",
+    "story": "00-story.png"
+  }
+}

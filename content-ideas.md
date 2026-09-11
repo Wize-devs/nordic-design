@@ -2,7 +2,7 @@
 
 Banco de ideas para posts/carousels futuros, para no perderlas. Investigado a partir de tendencias de barbería y redes sociales de 2026. Marcar como `hecho` cuando una idea se convierta en post (y anotar la carpeta en `posts/instagram/`).
 
-Ya cubierto (no repetir): hábitos de cuidado personal, tipos de cara y barba, manicura/pedicura para hombres, aceite/bálsamo/cera, cortes a evitar con pelo fino, política de puntualidad, bienvenida de staff (Jennifer), día de partido, recordatorio de parqueo, cuidado de barba.
+Ya cubierto (no repetir): hábitos de cuidado personal, tipos de cara y barba, manicura/pedicura para hombres, aceite/bálsamo/cera, cortes a evitar con pelo fino, política de puntualidad, bienvenida de staff (Jennifer), día de partido, recordatorio de parqueo, cuidado de barba, 15 de septiembre horario especial, 15 de septiembre conmemorativo (Día de la Independencia de Guatemala).
 
 ## Pendientes
 
