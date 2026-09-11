@@ -48,23 +48,24 @@
     inset:0;
     width:100%;height:100%;
     object-fit:cover;
-    object-position:50% 30%;
+    object-position:50% 22%;
+    filter:brightness(1.9) contrast(1.08) saturate(1.1);
   }
 
   /* Scrim: banda superior con la foto respira, mitad inferior cae a ink plano para el bloque de texto */
   .scrim-top{
     position:absolute;
-    left:0;right:0;top:0;height:18%;
-    background:linear-gradient(to bottom,rgba(16,16,16,.55) 0%,rgba(16,16,16,0) 100%);
+    left:0;right:0;top:0;height:20%;
+    background:linear-gradient(to bottom,rgba(16,16,16,.3) 0%,rgba(16,16,16,0) 100%);
   }
   .scrim-bottom{
     position:absolute;
-    left:0;right:0;bottom:0;height:78%;
+    left:0;right:0;bottom:0;height:82%;
     background:linear-gradient(to top,
       var(--ink) 0%,
-      var(--ink) 52%,
-      rgba(16,16,16,.97) 62%,
-      rgba(16,16,16,.7) 78%,
+      var(--ink) 58%,
+      rgba(16,16,16,.97) 66%,
+      rgba(16,16,16,.7) 80%,
       rgba(16,16,16,0) 100%);
   }
 
@@ -74,89 +75,93 @@
     height:80px;
   }
 
-  /* Eyebrow display — el anuncio del cambio, a tamaño titular */
-  .eyebrow{
-    position:absolute;
-    top:150px;left:64px;
-    font-family:"Lost in South";
-    font-size:54px;
-    line-height:1.0;
-    letter-spacing:.07em;
-    text-transform:uppercase;
-    color:var(--gold);
-  }
-  .eyebrow-rule{
-    position:absolute;
-    top:290px;left:64px;
-    width:120px;height:3px;
-    background:var(--gold-deep);
-  }
-
   .content{
     position:absolute;
-    left:64px;right:64px;bottom:126px;
+    left:64px;right:64px;top:130px;
   }
 
+  /* Titular — lo primero que se lee, a tamaño display */
   .headline{
     font-family:"Lost in South";
-    font-size:66px;
-    line-height:.94;
-    letter-spacing:.07em;
+    font-size:84px;
+    line-height:.9;
+    letter-spacing:.06em;
     text-transform:uppercase;
     color:var(--bone);
-    margin-bottom:36px;
   }
   .headline .hl{color:var(--gold);}
 
-  /* Lista de beneficios — el ancla visual, reemplaza la fila de horario */
+  .rule{
+    width:120px;height:3px;
+    background:var(--gold-deep);
+    margin:24px 0 16px;
+  }
+
+  /* Subtítulo — texto real, Fira Sans Condensed, ya no compite con el titular */
+  .subtitle{
+    font-family:"Fira Sans Condensed";
+    font-weight:800;
+    font-size:33px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:28px;
+  }
+
+  /* Captura del sistema real */
+  .screenshot-wrap{
+    background:var(--ink);
+    border:1px solid var(--gold-deep);
+    border-radius:14px;
+    padding:9px;
+    box-shadow:0 16px 36px rgba(0,0,0,.45);
+    margin:0 auto 30px;
+    width:72%;
+  }
+  .screenshot{
+    display:block;
+    width:100%;
+    border-radius:7px;
+  }
+
+  /* Lista de beneficios — solo el label, a tamaño grande */
   .benefits{
     border-top:1px solid rgba(247,244,236,.15);
-    margin-bottom:34px;
+    margin-bottom:28px;
   }
   .benefit-row{
     display:flex;
-    align-items:flex-start;
-    gap:20px;
-    padding:20px 0;
+    align-items:baseline;
+    gap:18px;
+    padding:16px 0;
     border-bottom:1px solid rgba(247,244,236,.15);
   }
   .benefit-num{
     font-family:"Fira Sans Condensed";
     font-weight:800;
-    font-size:24px;
+    font-size:25px;
     color:var(--gold);
     font-feature-settings:"tnum" 1;
-    padding-top:2px;
   }
-  .benefit-text{flex:1;}
   .benefit-label{
     font-family:"Fira Sans Condensed";
     font-weight:700;
-    font-size:29px;
+    font-size:34px;
     letter-spacing:.01em;
     text-transform:uppercase;
     color:var(--bone);
-    margin-bottom:4px;
-  }
-  .benefit-sub{
-    font-family:"Fira Sans Condensed";
-    font-weight:400;
-    font-size:22px;
-    line-height:1.3;
-    color:var(--bone);
-    opacity:.75;
   }
 
   .cta{
     border:1px solid var(--gold-deep);
     border-radius:12px;
-    padding:18px 24px;
+    padding:14px 24px;
     text-align:center;
   }
   .cta-text{
     font-family:"Fira Sans Condensed";
     font-weight:800;
-    font-size:24px;
+    font-size:21px;
     letter-spacing:.06em;
     text-transform:uppercase;
     color:var(--gold);
@@ -164,14 +169,14 @@
 
   .footer{
     position:absolute;
-    left:0;right:0;bottom:48px;
+    left:0;right:0;bottom:44px;
     display:flex;
     justify-content:center;
   }
   .handle{
     font-family:"Fira Sans Condensed";
     font-weight:600;
-    font-size:21px;
+    font-size:20px;
     color:var(--steel);
     letter-spacing:.03em;
   }
@@ -185,34 +190,29 @@
   <div class="scrim-bottom"></div>
 
   <img class="logo" src="../../../logo-variations/Nordic-BarberShop-logo-white.svg" alt="Nordic Barber Shop">
-  <div class="eyebrow">NUEVO SISTEMA<br>DE CITAS</div>
-  <div class="eyebrow-rule"></div>
 
   <div class="content">
 
     <div class="headline">AGENDAR AHORA<br>ES <span class="hl">MÁS FÁCIL</span></div>
+    <div class="rule"></div>
+    <div class="subtitle">Nuevo sistema de citas</div>
+
+    <div class="screenshot-wrap">
+      <img class="screenshot" src="assets/app-sistema.png" alt="Captura del nuevo sistema de citas de Nordic Barber Shop">
+    </div>
 
     <div class="benefits">
       <div class="benefit-row">
         <div class="benefit-num">01</div>
-        <div class="benefit-text">
-          <div class="benefit-label">Cambiamos de sistema</div>
-          <div class="benefit-sub">Actualizamos nuestra plataforma de citas.</div>
-        </div>
+        <div class="benefit-label">Cambiamos de sistema</div>
       </div>
       <div class="benefit-row">
         <div class="benefit-num">02</div>
-        <div class="benefit-text">
-          <div class="benefit-label">Nueva versión</div>
-          <div class="benefit-sub">Programar tu cita es mucho más fácil.</div>
-        </div>
+        <div class="benefit-label">Nueva versión</div>
       </div>
       <div class="benefit-row">
         <div class="benefit-num">03</div>
-        <div class="benefit-text">
-          <div class="benefit-label">Seguimos mejorando</div>
-          <div class="benefit-sub">Trabajamos para que tu experiencia sea mejor.</div>
-        </div>
+        <div class="benefit-label">Seguimos mejorando</div>
       </div>
     </div>
 

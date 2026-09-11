@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Nordic Barber Shop — Nuevo sistema de citas (Story)</title>
+<title>Nordic Barber Shop — Nuevo sistema de citas (Story 1/2)</title>
 <style>
   @font-face{
     font-family:"Lost in South";
@@ -48,115 +48,93 @@
     inset:0;
     width:100%;height:100%;
     object-fit:cover;
-    object-position:50% 28%;
+    object-position:50% 20%;
+    filter:brightness(1.9) contrast(1.08) saturate(1.1);
   }
 
   .scrim-top{
     position:absolute;
-    left:0;right:0;top:0;height:18%;
-    background:linear-gradient(to bottom,rgba(16,16,16,.55) 0%,rgba(16,16,16,0) 100%);
+    left:0;right:0;top:0;height:16%;
+    background:linear-gradient(to bottom,rgba(16,16,16,.3) 0%,rgba(16,16,16,0) 100%);
   }
   .scrim-bottom{
     position:absolute;
-    left:0;right:0;bottom:0;height:78%;
+    left:0;right:0;bottom:0;height:80%;
     background:linear-gradient(to top,
       var(--ink) 0%,
-      var(--ink) 52%,
-      rgba(16,16,16,.97) 62%,
-      rgba(16,16,16,.7) 78%,
+      var(--ink) 46%,
+      rgba(16,16,16,.97) 54%,
+      rgba(16,16,16,.7) 68%,
       rgba(16,16,16,0) 100%);
   }
 
   /* Logo — bajo la zona segura superior de Instagram */
   .logo{
     position:absolute;
-    top:260px;right:56px;
+    top:250px;right:56px;
     height:80px;
   }
 
-  /* Eyebrow display — bajo la zona segura superior de Instagram */
-  .eyebrow{
-    position:absolute;
-    top:274px;left:64px;
-    font-family:"Lost in South";
-    font-size:54px;
-    line-height:1.0;
-    letter-spacing:.07em;
-    text-transform:uppercase;
-    color:var(--gold);
-  }
-  .eyebrow-rule{
-    position:absolute;
-    top:414px;left:64px;
-    width:120px;height:3px;
-    background:var(--gold-deep);
-  }
-
-  /* Todo el copy anclado al fondo, con espacio para la barra de respuesta */
+  /* Franja central: todo el copy centrado verticalmente entre las dos zonas seguras de Instagram */
   .content{
     position:absolute;
-    left:64px;right:64px;bottom:296px;
+    left:64px;right:64px;top:230px;bottom:230px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
   }
 
   .headline{
     font-family:"Lost in South";
-    font-size:66px;
-    line-height:.94;
-    letter-spacing:.07em;
+    font-size:108px;
+    line-height:.9;
+    letter-spacing:.06em;
     text-transform:uppercase;
     color:var(--bone);
-    margin-bottom:36px;
   }
   .headline .hl{color:var(--gold);}
 
-  .benefits{
-    border-top:1px solid rgba(247,244,236,.15);
-    margin-bottom:34px;
+  .rule{
+    width:130px;height:3px;
+    background:var(--gold-deep);
+    margin:32px 0 22px;
   }
-  .benefit-row{
-    display:flex;
-    align-items:flex-start;
-    gap:20px;
-    padding:20px 0;
-    border-bottom:1px solid rgba(247,244,236,.15);
-  }
-  .benefit-num{
+
+  .subtitle{
     font-family:"Fira Sans Condensed";
     font-weight:800;
-    font-size:24px;
-    color:var(--gold);
-    font-feature-settings:"tnum" 1;
-    padding-top:2px;
-  }
-  .benefit-text{flex:1;}
-  .benefit-label{
-    font-family:"Fira Sans Condensed";
-    font-weight:700;
-    font-size:29px;
-    letter-spacing:.01em;
+    font-size:40px;
+    letter-spacing:.08em;
     text-transform:uppercase;
-    color:var(--bone);
-    margin-bottom:4px;
+    color:var(--gold);
+    margin-bottom:80px;
   }
-  .benefit-sub{
-    font-family:"Fira Sans Condensed";
-    font-weight:400;
-    font-size:22px;
-    line-height:1.3;
-    color:var(--bone);
-    opacity:.75;
+
+  .screenshot-wrap{
+    background:var(--ink);
+    border:1px solid var(--gold-deep);
+    border-radius:18px;
+    padding:12px;
+    box-shadow:0 20px 44px rgba(0,0,0,.45);
+    margin:0 auto 80px;
+    width:92%;
+  }
+  .screenshot{
+    display:block;
+    width:100%;
+    border-radius:10px;
   }
 
   .cta{
     border:1px solid var(--gold-deep);
-    border-radius:12px;
-    padding:18px 24px;
+    border-radius:14px;
+    padding:22px 24px;
     text-align:center;
   }
   .cta-text{
     font-family:"Fira Sans Condensed";
     font-weight:800;
-    font-size:24px;
+    font-size:28px;
     letter-spacing:.06em;
     text-transform:uppercase;
     color:var(--gold);
@@ -164,7 +142,7 @@
 
   .footer{
     position:absolute;
-    left:0;right:0;bottom:200px;
+    left:0;right:0;bottom:170px;
     display:flex;
     justify-content:center;
   }
@@ -185,35 +163,15 @@
   <div class="scrim-bottom"></div>
 
   <img class="logo" src="../../../logo-variations/Nordic-BarberShop-logo-white.svg" alt="Nordic Barber Shop">
-  <div class="eyebrow">NUEVO SISTEMA<br>DE CITAS</div>
-  <div class="eyebrow-rule"></div>
 
   <div class="content">
 
     <div class="headline">AGENDAR AHORA<br>ES <span class="hl">MÁS FÁCIL</span></div>
+    <div class="rule"></div>
+    <div class="subtitle">Nuevo sistema de citas</div>
 
-    <div class="benefits">
-      <div class="benefit-row">
-        <div class="benefit-num">01</div>
-        <div class="benefit-text">
-          <div class="benefit-label">Cambiamos de sistema</div>
-          <div class="benefit-sub">Actualizamos nuestra plataforma de citas.</div>
-        </div>
-      </div>
-      <div class="benefit-row">
-        <div class="benefit-num">02</div>
-        <div class="benefit-text">
-          <div class="benefit-label">Nueva versión</div>
-          <div class="benefit-sub">Programar tu cita es mucho más fácil.</div>
-        </div>
-      </div>
-      <div class="benefit-row">
-        <div class="benefit-num">03</div>
-        <div class="benefit-text">
-          <div class="benefit-label">Seguimos mejorando</div>
-          <div class="benefit-sub">Trabajamos para que tu experiencia sea mejor.</div>
-        </div>
-      </div>
+    <div class="screenshot-wrap">
+      <img class="screenshot" src="assets/app-sistema.png" alt="Captura del nuevo sistema de citas de Nordic Barber Shop">
     </div>
 
     <div class="cta">
