@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Nordic Barber Shop — Nuevo sistema de citas (Story)</title>
+<style>
+  @font-face{
+    font-family:"Lost in South";
+    src:url("../../../fonts/lost_in_south/Lost in South.otf") format("opentype");
+  }
+  @font-face{
+    font-family:"Fira Sans Condensed";
+    font-weight:400;
+    src:url("../../../fonts/Fira Sans Condensed/FiraSansCondensed-Regular.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Fira Sans Condensed";
+    font-weight:700;
+    src:url("../../../fonts/Fira Sans Condensed/FiraSansCondensed-Bold.ttf") format("truetype");
+  }
+  @font-face{
+    font-family:"Fira Sans Condensed";
+    font-weight:800;
+    src:url("../../../fonts/Fira Sans Condensed/FiraSansCondensed-ExtraBold.ttf") format("truetype");
+  }
+
+  :root{
+    --ink:#101010;
+    --charcoal:#1A1A1A;
+    --gold:#FFD200;
+    --gold-deep:#C9A400;
+    --bone:#F7F4EC;
+    --steel:rgba(247,244,236,.62);
+    --steel-dim:rgba(247,244,236,.28);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink);}
+
+  .canvas{
+    position:relative;
+    width:1080px;
+    height:1920px;
+  }
+
+  .bg{
+    position:absolute;
+    inset:0;
+    width:100%;height:100%;
+    object-fit:cover;
+    object-position:50% 28%;
+  }
+
+  .scrim-top{
+    position:absolute;
+    left:0;right:0;top:0;height:18%;
+    background:linear-gradient(to bottom,rgba(16,16,16,.55) 0%,rgba(16,16,16,0) 100%);
+  }
+  .scrim-bottom{
+    position:absolute;
+    left:0;right:0;bottom:0;height:78%;
+    background:linear-gradient(to top,
+      var(--ink) 0%,
+      var(--ink) 52%,
+      rgba(16,16,16,.97) 62%,
+      rgba(16,16,16,.7) 78%,
+      rgba(16,16,16,0) 100%);
+  }
+
+  /* Logo — bajo la zona segura superior de Instagram */
+  .logo{
+    position:absolute;
+    top:260px;right:56px;
+    height:80px;
+  }
+
+  /* Pill — bajo la zona segura superior de Instagram */
+  .pill{
+    position:absolute;
+    top:274px;left:64px;
+    background:var(--gold);
+    color:var(--ink);
+    font-family:"Fira Sans Condensed";
+    font-weight:800;
+    font-size:23px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:12px 28px;
+    border-radius:40px;
+  }
+
+  /* Todo el copy anclado al fondo, con espacio para la barra de respuesta */
+  .content{
+    position:absolute;
+    left:64px;right:64px;bottom:296px;
+  }
+
+  .headline{
+    font-family:"Lost in South";
+    font-size:66px;
+    line-height:.94;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+    color:var(--bone);
+    margin-bottom:36px;
+  }
+  .headline .hl{color:var(--gold);}
+
+  .benefits{
+    border-top:1px solid rgba(247,244,236,.15);
+    margin-bottom:34px;
+  }
+  .benefit-row{
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+    padding:20px 0;
+    border-bottom:1px solid rgba(247,244,236,.15);
+  }
+  .benefit-num{
+    font-family:"Fira Sans Condensed";
+    font-weight:800;
+    font-size:24px;
+    color:var(--gold);
+    font-feature-settings:"tnum" 1;
+    padding-top:2px;
+  }
+  .benefit-text{flex:1;}
+  .benefit-label{
+    font-family:"Fira Sans Condensed";
+    font-weight:700;
+    font-size:29px;
+    letter-spacing:.01em;
+    text-transform:uppercase;
+    color:var(--bone);
+    margin-bottom:4px;
+  }
+  .benefit-sub{
+    font-family:"Fira Sans Condensed";
+    font-weight:400;
+    font-size:22px;
+    line-height:1.3;
+    color:var(--bone);
+    opacity:.75;
+  }
+
+  .cta{
+    border:1px solid var(--gold-deep);
+    border-radius:12px;
+    padding:18px 24px;
+    text-align:center;
+  }
+  .cta-text{
+    font-family:"Fira Sans Condensed";
+    font-weight:800;
+    font-size:24px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+
+  .footer{
+    position:absolute;
+    left:0;right:0;bottom:200px;
+    display:flex;
+    justify-content:center;
+  }
+  .handle{
+    font-family:"Fira Sans Condensed";
+    font-weight:600;
+    font-size:21px;
+    color:var(--steel);
+    letter-spacing:.03em;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+
+  <img class="bg" src="assets/bg-story.png" alt="">
+  <div class="scrim-top"></div>
+  <div class="scrim-bottom"></div>
+
+  <img class="logo" src="../../../logo-variations/Nordic-BarberShop-logo-white.svg" alt="Nordic Barber Shop">
+  <div class="pill">Nuevo sistema de citas</div>
+
+  <div class="content">
+
+    <div class="headline">TU CITA AHORA<br>EN <span class="hl">SEGUNDOS</span></div>
+
+    <div class="benefits">
+      <div class="benefit-row">
+        <div class="benefit-num">01</div>
+        <div class="benefit-text">
+          <div class="benefit-label">Horarios en tiempo real</div>
+          <div class="benefit-sub">Elegí día, hora y servicio disponible.</div>
+        </div>
+      </div>
+      <div class="benefit-row">
+        <div class="benefit-num">02</div>
+        <div class="benefit-text">
+          <div class="benefit-label">Confirmás y listo</div>
+          <div class="benefit-sub">Sin esperar respuesta por mensaje.</div>
+        </div>
+      </div>
+      <div class="benefit-row">
+        <div class="benefit-num">03</div>
+        <div class="benefit-text">
+          <div class="benefit-label">Recordatorio automático</div>
+          <div class="benefit-sub">Te avisamos antes de tu turno.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta">
+      <div class="cta-text">Agendá en el link de la bio</div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="handle">@nordicbarbershopgt</div>
+  </div>
+
+</div>
+</body>
+</html>
