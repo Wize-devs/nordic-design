@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(open *)",
-      "Bash(git *)"
+      "Bash(git *)",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless=new --disable-gpu --screenshot=/c/Users/Elder/OneDrive/Documents/nordic-design/posts/instagram/reclutamiento-recepcionista/story/story-v1.png --window-size=1080,1920 --force-device-scale-factor=1 --hide-scrollbars --virtual-time-budget=3000 --no-sandbox file:///C:/Users/Elder/OneDrive/Documents/nordic-design/posts/instagram/reclutamiento-recepcionista/story/index.html)",
+      "Bash(echo \"exit: $?\")",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless=new --disable-gpu --screenshot=C:/Users/Elder/AppData/Local/Temp/claude/C--Users-Elder-OneDrive-Documents-nordic-design/0b5a314a-3df3-4244-9581-2639fda0243c/scratchpad/index-check.png --window-size=1400,1000 --hide-scrollbars --virtual-time-budget=4000 --no-sandbox file:///C:/Users/Elder/OneDrive/Documents/nordic-design/index.html)"
     ]
   }
 }
